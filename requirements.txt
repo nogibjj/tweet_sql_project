@@ -1,0 +1,7 @@
+numpy
+tweepy
+pytest
+pylint
+black
+click
+pandas
