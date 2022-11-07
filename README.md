@@ -33,6 +33,19 @@ I specified the fields required to create the tables and populated them with the
 
 ### Research Questions
 
+Note: to replicate this analysis, please execute the scripts in the following order
+
+```
+# Extract the Twitter data into the data directory
+python scripts/extract_tweets.py -n @JoeBiden
+
+# Set up SQLite Database and populate it with data
+python tweets_to_sql.py
+
+# Run the queries
+python query_tweets.py
+```
+
 We want to understand whether Joe Biden's approval ratings were high when his twitter retweet counts were also high. Int he query_tweets.py file, I wrote 5 queries to help us answer this question. First note that our tweepy API only allowed us to collect the first 200 tweets from his timeline, so we had to limit our analysis to September, October and November data. 
 
 Our first query gives us the 10 days with his highest approval ratings: note that most of them were in October.
